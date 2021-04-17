@@ -4,4 +4,4 @@ from .models import Pet,Vaccine
 
 @admin.register(Pet)
 class PetAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['name','species','breed','sex','age','vaccines']
