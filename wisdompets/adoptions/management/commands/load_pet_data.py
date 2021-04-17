@@ -58,5 +58,5 @@ class Command(BaseCommand):
             vaccination_names = [name for name in raw_vaccination_names.split('| ') if name]
             for vac_name in vaccination_names:
                 vac = Vaccine.objects.get(name=vac_name)
-                pet.vaccinations.add(vac)
+                pet.vaccines.add(vac)
             pet.save()
